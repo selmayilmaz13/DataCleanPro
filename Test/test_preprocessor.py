@@ -1,9 +1,5 @@
-import pandas as pd
-import numpy as np
+from DataCleanPro import *
 
-
-
-from data_loader import DataLoader
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
 dl = DataLoader()
 
@@ -12,7 +8,7 @@ dl = DataLoader()
 
 
 
-from preprocessor import Preprocessor 
+
 
 pre = Preprocessor( dl.load_csv(url))
 

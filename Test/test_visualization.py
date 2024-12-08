@@ -1,6 +1,5 @@
-import pandas as pd
-from visualization import Visualization  
-from data_loader import DataLoader
+from DataCleanPro import *
+
 url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
 dl = DataLoader()
 

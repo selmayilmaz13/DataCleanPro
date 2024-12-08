@@ -1,4 +1,5 @@
 import pandas as pd
+
 class Transformation:
     def __init__(self, data: pd.DataFrame):
         if not isinstance(data, pd.DataFrame):
@@ -19,7 +20,6 @@ class Transformation:
 
         if len(columns) == 0:
             raise ValueError("No numeric columns found or specified for normalization.")
-
         normalized_data = self.data.copy()
         for col in columns:
             if not pd.api.types.is_numeric_dtype(self.data[col]):
@@ -56,5 +56,4 @@ class Transformation:
             if std == 0:
                 raise ValueError(f"Cannot standardize column '{col}' as it has zero standard deviation.")
             standardized_data[col] = (self.data[col] - mean) / std
-        
         return standardized_data

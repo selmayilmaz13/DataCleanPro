@@ -1,6 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+
 class Visualization:
     def __init__(self, data):
         if not isinstance(data, pd.DataFrame):

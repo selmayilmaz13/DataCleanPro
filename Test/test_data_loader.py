@@ -1,4 +1,4 @@
-from data_loader import DataLoader
+from DataCleanPro import *
 
 
 csv_url = "https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv"
@@ -8,14 +8,12 @@ json_url = "https://jsonplaceholder.typicode.com/posts"
 
 dl = DataLoader()
 
-
 try:
     csv_data = dl.load_csv(csv_url)
     print("\nCSV Data Loaded:")
     print(csv_data.head())
 except Exception as e:
     print(f"\nError loading CSV: {e}")
-
 
 try:
     xlsx_data = dl.load_xlsx(xlsx_url)

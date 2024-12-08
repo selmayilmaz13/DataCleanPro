@@ -1,11 +1,9 @@
 import pandas as pd
 
-
 class Preprocessor:
     def __init__(self, data: pd.DataFrame):
         self.data = data
-
-   
+    
     def check_missing_values(self):
         """Print missing values per column."""
         missing= self.data.isnull().sum()
@@ -13,8 +11,7 @@ class Preprocessor:
             print("No missing values found.")
         else:
             print("Missing Values:\n", missing)
-        
-
+    
     def handle_missing_values(self, strategy="mean"):
         """Handle missing values by mean, median, mode, or drop."""
         valid = ["mean", "median", "mode", "drop"]
@@ -39,7 +36,6 @@ class Preprocessor:
        
         return self.data
 
-   
     def encode_categorical(self, columns, method="label", order=None):
         """Encode categorical variables with one method at a time:
         - label: Label encoding
@@ -74,11 +70,8 @@ class Preprocessor:
                     freq = self.data[col].value_counts(dropna=False)
                     freq_i = freq / freq.sum()
                     self.data[col] = self.data[col].map(freq_i)
-
-        
         return self.data
 
-  
     def handle_outliers(self, columns=None, method="iqr", threshold=1.5, zscore_threshold=3.0, remove=False, visualize=False):
         """
         Detect (or remove) outliers using either IQR or Z-score method.
@@ -127,9 +120,6 @@ class Preprocessor:
             return self.data
         else:
             return outliers_df
-
-   
-  
 
     def check_duplicates(self, subset=None):
         """Check if duplicates exist without removing them."""
