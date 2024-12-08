@@ -5,16 +5,16 @@ Python-based toolkit for data processing and visualization. This project support
 The package is organized into the following modules:
 
 ### **Data Handling**
-- `DataLoader`: Load data from `.csv`, `.xlsx`, and `.json` file formats.
+- `DataLoader`: The first step in any data analysis or machine learning pipeline is loading the data. The DataLoader class in DataCleanPro allows users to load data from a variety of common file formats, such as CSV, JSON, and Excel.
 
 ### **Preprocessing**
-- `Preprocessor`: Handle missing values, encode categorical variables, detect outliers, and remove duplicates.
+- `Preprocessor`: Once the data is loaded, it usually needs to be cleaned and preprocessed before analysis. The Preprocessor class in DataCleanPro handles several common preprocessing tasks, such as handling missing values, encoding categorical variables, detecting outliers and removing duplicates.
 
 ### **Transformation**
-- `Transformation`: Normalize and standardize numeric data.
+- `Transformation`: After preprocessing, we may need to transform the data for machine learning models. This could involve standardizing or normalizing the data. The Transformation class provides methods for both operations.
 
 ### **Visualization**
-- `Visualization`: Creates insightful plots.
+- `Visualization`: To better understand the data and inspect the impact of preprocessing and transformations, DataCleanPro also offers basic data visualization tools using the Visualization class which creates insightful plots.
   
 
 ---
