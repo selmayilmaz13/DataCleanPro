@@ -51,7 +51,7 @@ The package is organized into the following modules:
 Load data from different file formats:
 
 ```python
-from toolkit import DataLoader
+from DataCleanPro import DataLoader
 
 # Load CSV
 csv_data = DataLoader.load_csv("https://example.com/data.csv")
@@ -61,3 +61,18 @@ xlsx_data = DataLoader.load_xlsx("https://example.com/data.xlsx")
 
 # Load JSON
 json_data = DataLoader.load_json("https://example.com/data.json")
+
+### **Preprocessing**
+
+'''python
+from DataCleanPro import Preprocessor
+
+# Handle for missing values using 'mode'
+cleaned_data = preprocessor.handle_missing_values(strategy="mode")
+print(cleaned_data.head())
+
+# Find outliers using z-score (no removing them)
+outliers = preprocessor.handle_outliers(method="zscore", remove=False)
+print("Outliers detected:\n", outliers)
+
+
