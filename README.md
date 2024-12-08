@@ -35,13 +35,12 @@ The package is organized into the following modules:
 - Specify columns for transformation.
 
 ### **Visualization**
-- Creates:
-  - Distribution plots
-  - Correlation heatmaps
-  - Boxplots for outliers
-  - Categorical count plots
-  - Grouped boxplots
-  - Histograms for numeric columns
+- Distribution plots
+- Correlation heatmaps
+- Boxplots for outliers
+- Categorical count plots
+- Grouped boxplots
+- Histograms for numeric columns
 
 ---
 
