@@ -1,5 +1,5 @@
 # DataCleanPro
-# Python-based toolkit for data processing and visualization. This project supports multiple data formats (`.csv`, `.xlsx`, `.json`) and includes methods for handling missing values, detecting outliers and creating visualizations.
+Python-based toolkit for data processing and visualization. This project supports multiple data formats (`.csv`, `.xlsx`, `.json`) and includes methods for handling missing values, detecting outliers and creating visualizations.
 ## **Package Organization**
 
 The package is organized into the following modules:
