@@ -61,10 +61,12 @@ xlsx_data = DataLoader.load_xlsx("https://example.com/data.xlsx")
 
 # Load JSON
 json_data = DataLoader.load_json("https://example.com/data.json")
+```
 
 ### **Preprocessing**
+This class allows for handling missing values, finding or removing outliers and encoding categorical variables:
 
-'''python
+```python
 from DataCleanPro import Preprocessor
 
 # Handle for missing values using 'mode'
@@ -74,5 +76,47 @@ print(cleaned_data.head())
 # Find outliers using z-score (no removing them)
 outliers = preprocessor.handle_outliers(method="zscore", remove=False)
 print("Outliers detected:\n", outliers)
+
+# Encode categorical columns using 'label'
+encoded_data = preprocessor.encode_categorical(columns=["Category"], method="label")
+print(encoded_data.head())
+```
+
+### **Transformation**
+This class normalizes and standardizes numeric data:
+
+```python
+from DataCleanPro import Transformation
+
+# Initialize Transformer
+transformer = Transformation(cleaned_data)
+
+# Normalize numeric columns
+normalized_data = transformer.normalize_data(columns=["Age", "Fare"])
+print(normalized_data.head())
+
+# Standardize numeric columns
+standardized_data = transformer.standardize_data(columns=["Age", "Fare"])
+print(standardized_data.head())
+```
+
+### **Visualization**
+
+This class offers various plotting methods:
+
+```python
+from DataCleanPro import Visualization
+
+# Initialize Visualizer
+visualizer = Visualization(cleaned_data)
+
+# Plot correlation heatmap
+visualizer.plot_correlation_heatmap()
+
+# Create grouped boxplot for numeric column grouped by categorical column
+visualizer.plot_grouped_boxplot(numeric_column="Income", category_column="Gender")
+```
+
+
 
 
